@@ -1,0 +1,22 @@
+server:
+  port: 8081
+  servlet:
+    context-path: /demo
+
+###  uesr.name 读取的是idea的cedar
+user:
+  name1: 小青
+  age: 32
+  description: 我是测试环境${user.name1}呀，今天${user.age}岁了.
+
+  #####数据库配置#########
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.0.251:3306/xqc_locallife
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
